@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or">Or</string>
+
+    <!-- Output to TextView styled with little HTML -->
+    <string name="create_new_account">Create New Account</string>
+    <string name="title"><![CDATA[<h3>LIST OF SHOES</h3><br>]]></string>
+    <string name="name"><![CDATA["<br><b>Name: "</b>]]></string>
+    <string name="size"><![CDATA["<br><b>Size: "</b>]]></string>
+    <string name="company"><![CDATA["<br><b>Company: "</b>]]></string>
+    <string name="description"><![CDATA["<br><b>Description: "</b>]]></string>
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_detail">Welcome in the best Shoes Store App\nYou will spend a lot of money here ;)</string>
+    <string name="view_instruction">View Instruction</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_detail">1. the first instruction\n2. second instruction\n3. third instruction\n4. ....etc</string>
+    <string name="list_shoes_screen">List Shoes Screen</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company_label">Company</string>
+    <string name="shoe_size_label">Shoe Size</string>
+    <string name="description_label">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="logout">Logout</string>
 </resources>
