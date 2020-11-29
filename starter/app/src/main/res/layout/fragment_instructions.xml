@@ -9,40 +9,44 @@
     </data>
 
     <!-- Vertical LinearLayout is enough with three views -->
-    <LinearLayout
-        android:id="@+id/frameLayout2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".fragments.InstructionsFragment"
-        android:orientation="vertical">
-
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/instructions"
-            android:textSize="50sp"
-            android:layout_gravity="center_horizontal"/>
+            tools:context=".fragments.InstructionsFragment"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/instructions_detail"
-            android:layout_gravity="center_horizontal"/>
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/instructions"
+                android:textSize="50sp"
+                android:layout_gravity="center_horizontal"/>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="@string/list_shoes_screen"
-            android:layout_gravity="center_horizontal"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:onClick="@{() -> instructionsViewModel.showListOfShoes()}"/>
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/instructions_detail"
+                android:layout_gravity="center_horizontal"/>
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/list_shoes_screen"
+                android:layout_gravity="center_horizontal"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:onClick="@{() -> instructionsViewModel.showListOfShoes()}"/>
+
+        </LinearLayout>
+    </ScrollView>
 </layout>
