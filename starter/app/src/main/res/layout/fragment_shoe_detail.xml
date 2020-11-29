@@ -124,22 +124,21 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
-                android:onClick="@{() -> mainViewModel.onSave()}"
+                android:onClick="@{() -> mainViewModel.save()}"
                 android:text="@string/add_shoe"
-                app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+                app:layout_constraintEnd_toStartOf="@+id/cancelButton2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/descriptionEditText" />
 
 
             <Button
-                android:id="@+id/cancelButton"
+                android:id="@+id/cancelButton2"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="16dp"
-                android:onClick="@{() -> mainViewModel.onCancel()"
+                android:onClick="@{() -> mainViewModel.cancel()"
                 android:text="@string/cancel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/saveButton"

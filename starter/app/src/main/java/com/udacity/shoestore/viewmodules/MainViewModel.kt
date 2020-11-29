@@ -24,6 +24,11 @@ class MainViewModel(
         get() = _navigateToShoeDetailScreen
 
 
+    private val _eventCancel = MutableLiveData<Boolean>()
+
+    val eventCancel : LiveData<Boolean>
+        get() = _eventCancel
+
     init {
         _list.value = mutableListOf(
                 Shoe("Air Jordan",7.5,"Nike","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tortor vitae purus faucibus ornare suspendisse sed."),
@@ -33,26 +38,22 @@ class MainViewModel(
         editedShoe.value = Shoe()
     }
 
-    private val _eventCancel = MutableLiveData<Boolean>()
-    val eventCancel : LiveData<Boolean>
-        get() = _eventCancel
-
-    fun onCancel(){
-        _eventSaveShoe.value = true
+    fun cancel(){
+        _eventCancel.value = true
     }
 
     fun doneCanceling(){
         _eventCancel.value = false
     }
 
-    fun onSave(){
+    fun save(){
         val l2 = _list.value
         l2?.add(editedShoe.value)
 
         editedShoe.value = Shoe()
 
         _list.value = l2
-        _eventCancel.value = true
+        _eventSaveShoe.value = true
     }
 
     private val _eventSaveShoe = MutableLiveData<Boolean?>()

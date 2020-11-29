@@ -37,13 +37,6 @@ class ShoeDetailFragment : Fragment() {
         mainViewModel.eventSaveShoe.observe(viewLifecycleOwner, Observer { hasSaved ->
 
             if(hasSaved!!){
-//                val shoe = Shoe(
-//                    binding.shoeNameEditText.text.toString(),
-//                    binding.sizeEditText.text.toString().toDouble(),
-//                    binding.companyEditText.text.toString(),
-//                    binding.descriptionEditText.text.toString()
-//                )
-//                mainViewModel.save(shoe)
                 findNavController().navigate(
                         ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment())
                 mainViewModel.doneSaving()
