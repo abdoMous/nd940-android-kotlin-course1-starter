@@ -7,10 +7,9 @@ import android.text.Spanned
 import androidx.core.text.HtmlCompat
 import com.udacity.shoestore.models.Shoe
 
-fun formatShoesList(list: List<Shoe?>, resources: Resources) : Spanned {
+fun formatShoe(shoe: Shoe?, resources: Resources) : Spanned {
     val sb = StringBuilder()
     sb.apply {
-        list.forEach { shoe ->
             append(resources.getString(R.string.name))
             append(shoe?.name)
             append(resources.getString(R.string.size))
@@ -20,7 +19,6 @@ fun formatShoesList(list: List<Shoe?>, resources: Resources) : Spanned {
             append(resources.getString(R.string.description))
             append(shoe?.description)
             append("<br><br>")
-        }
     }
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

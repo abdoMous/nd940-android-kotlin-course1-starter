@@ -2,7 +2,7 @@ package com.udacity.shoestore.viewmodules
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.udacity.shoestore.formatShoesList
+import com.udacity.shoestore.formatShoe
 import com.udacity.shoestore.models.Shoe
 
 class MainViewModel(
@@ -15,14 +15,13 @@ class MainViewModel(
     val list : LiveData<MutableList<Shoe?>>
         get() = _list
 
-    val listString = Transformations.map(_list) { l ->
-        formatShoesList(l , application.resources)
+    val listFormatted = Transformations.map(_list) { l ->
+        l.map { formatShoe(it , application.resources) }
     }
 
     private val _navigateToShoeDetailScreen = MutableLiveData<Boolean>()
     val navigateToShoeDetailScreen : LiveData<Boolean>
         get() = _navigateToShoeDetailScreen
-
 
     private val _eventCancel = MutableLiveData<Boolean>()
 
